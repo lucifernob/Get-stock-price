@@ -23,18 +23,17 @@ label3 = tk.Label(root, text='(According to yahoo finance)',bg = '#ffffff',fg="#
 label3.config(font=('helvetica', 8))
 canvas.create_window(200, 120, window=label3)
 #=============================================Enter stock symbol============================================
-enter_quote=tk.Entry(root,bg="#EAEAEA")
+enter_quote=tk.Entry(root,bg="#EAEAEA")                                                                                                                 #Take symbol as input
 canvas.create_window(200,140,window=enter_quote)
 
 #=============================================Get price function============================================
 def stockprice():
-    quote=enter_quote.get()
-    URL="https://in.finance.yahoo.com/quote/"+quote+"?p="+quote
-    r=requests.get(URL)
-    stock=bs4.BeautifulSoup(r.text,"html5lib")
-    s=stock.find_all("div",{"class":"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find("span").text
+    quote=enter_quote.get()                                                                                                                             #Using entered input here
+    URL="https://in.finance.yahoo.com/quote/"+quote+"?p="+quote                                                                                         #completing URL
+    r=requests.get(URL)                                                                                                                                 #Checking URL is valid or not, it should give response 200
+    stock=bs4.BeautifulSoup(r.text,"html5lib")                                                                                                          #Coverting html into text
+    s=stock.find_all("div",{"class":"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find("span").text                                                          #class of yahoo finance where price of stock is present
     
-    #=============================================Output Labels============================================
     label3 = tk.Label(root, text="The current price of "+quote+ " is: ",font=('helvetica', 10), bg="#ffffff")
     canvas.create_window(200, 210, window=label3)
     
