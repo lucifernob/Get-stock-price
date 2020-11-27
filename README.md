@@ -6,6 +6,7 @@ Canvas from tkinter for making interactive interface.
 requests to check URL response.
 
 ![Working example](https://github.com/lucifernob/Get-stock-price/blob/main/misc/Screenshot%20(1584).png)
-
+![Working example](https://github.com/lucifernob/Get-stock-price/blob/main/misc/Screenshot%20(1585).png)
+![Working example](https://github.com/lucifernob/Get-stock-price/blob/main/misc/Screenshot%20(1586).png)
 
 Hope you like my project :)
