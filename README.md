@@ -5,7 +5,7 @@ Used BeautifulSoup and html5lib for web scraping.
 Canvas from tkinter for making interactive interface.
 requests to check URL response.
 
-![GitHub Logo](/misc/Screenshot (1584).png)
+![Test IMAGE](/misc/Screenshot (1584).png)
 
 
 Hope you like my project :)
